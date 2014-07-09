@@ -1,0 +1,161 @@
+<html>
+<head>
+  <title>The Fall of Hanoi</title>
+  <script src="_.js"></script>
+  <script src="jquery.js"></script>
+  <script src="hanoi.js"></script>
+  <script src="hanoi_ui.js"></script>
+  <style>
+
+  /* RESET */
+
+  html, body, header, main, footer, nav, h1, h4, a, ul, li, section, p, small {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  body {
+    font-family: verdana;
+    background: #ccc;
+    color: #003264;
+    line-height: normal;
+    text-align: center;
+  }
+
+  /* --- CONTENT --- */
+
+  header {
+    width: 600px;
+    margin: 50px auto;
+  }
+
+  h1 {
+    display: block;
+    margin: 10px 0 0 0;
+    font-style: bold;
+    font-size: 40px;
+  }
+
+  h4 {
+
+  }
+
+  li {
+    background: #aaa;
+    border-radius: 5px;
+  }
+
+  footer {
+    display: block;
+    width: 600px;
+    margin: 50px auto;
+  }
+
+  .towers {
+    width: 600px;
+    margin: auto auto;
+  }
+
+  .towers ul {
+    width: 200px;
+  }
+
+  .towers:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .bases {
+    display: block;
+    width: 600px;
+    margin: 0 auto 50px auto;
+  }
+
+  .towers > .one {
+    float: left;
+  }
+
+  .towers > .two {
+    float: left;
+  }
+
+  .towers > .three {
+    float: left;
+  }
+
+  .towers li {
+    display: block;
+    height: 90px;
+    width: 140px;
+    border: 5px solid black;
+    margin: auto auto;
+  }
+
+  .towers .small {
+    width: 40px;
+  }
+
+  .towers .medium {
+    width: 90px;
+  }
+
+  .towers .large {
+  }
+
+  .towers .hidden {
+    border: 5px solid transparent;
+    background: transparent;
+  }
+
+  .bases li {
+    display: block;
+    height: 90px;
+    width: 190px;
+    border: 5px solid black;
+    float: left;
+    text-align: center;
+    font-style: bold;
+    font-size: 40px;
+    line-height: 2;
+  }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1 class="player">The Fall of Hanoi</h1>
+  </header>
+
+  <ul class="towers">
+    <ul class="one">
+      <li class="small"></li>
+      <li class="medium"></li>
+      <li class="large"></li>
+    </ul>
+    <ul class="two">
+      <li class="hidden"></li>
+      <li class="hidden"></li>
+      <li class="hidden"></li>
+    </ul>
+    <ul class="three">
+      <li class="hidden"></li>
+      <li class="hidden"></li>
+      <li class="hidden"></li>
+    </ul>
+  </ul>
+  <ul class="bases">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+  </ul>
+  <footer>
+    <h4>Click on a Tower or Boulder to select a piece to move.</h4>
+    <h4>Then click on a Destination Tower to move your piece.</h4>
+  </footer>
+</body>
+</html>
