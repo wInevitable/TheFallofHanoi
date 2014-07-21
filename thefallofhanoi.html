@@ -3,6 +3,7 @@
   <title>The Fall of Hanoi</title>
   <script src="_.js"></script>
   <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
   <script src="hanoi.js"></script>
   <script src="hanoi_ui.js"></script>
   <style>
@@ -23,6 +24,13 @@
     color: #003264;
     line-height: normal;
     text-align: center;
+  }
+
+  /* --- UTILITIES --- */
+
+  .interactive:hover {
+    cursor: pointer;
+    background: #fff;
   }
 
   /* --- CONTENT --- */
@@ -132,30 +140,37 @@
   </header>
 
   <ul class="towers">
-    <ul class="one">
-      <li class="small"></li>
-      <li class="medium"></li>
-      <li class="large"></li>
+    <ul id="sort1" class="one connected">
+      <li class="small interactive"></li>
+      <li class="medium interactive"></li>
+      <li class="large interactive"></li>
     </ul>
-    <ul class="two">
+    <ul id="sort2" class="two connected">
       <li class="hidden"></li>
       <li class="hidden"></li>
       <li class="hidden"></li>
     </ul>
-    <ul class="three">
+    <ul id="sort3" class="three connected">
       <li class="hidden"></li>
       <li class="hidden"></li>
       <li class="hidden"></li>
     </ul>
   </ul>
   <ul class="bases">
-      <li>One</li>
-      <li>Two</li>
-      <li>Three</li>
+      <li class="interactive">One</li>
+      <li class="interactive">Two</li>
+      <li class="interactive">Three</li>
   </ul>
   <footer>
     <h4>Click on a Tower or Boulder to select a piece to move.</h4>
     <h4>Then click on a Destination Tower to move your piece.</h4>
   </footer>
+
+  <!-- <script id="template" type="text/template">
+    REFACTOR CODE WITH TEMPLATES!!!!
+    <li class="pointer"><%= text %></li>
+    var rendered = _.template($('#template').html());
+    var element = rendered({ text: 'foo' })
+  </script> -->
 </body>
 </html>

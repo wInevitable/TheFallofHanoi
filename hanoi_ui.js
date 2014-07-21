@@ -73,7 +73,7 @@
           size = "large";
         }
 
-        towerSelected.append("<li class=\"" + size + "\"></li>");
+        towerSelected.append("<li class=\"" + size + " pointer\"></li>");
       });
 
       for (var i = tower.length; i < 3; i++){
@@ -91,4 +91,8 @@ $(function() {
   $("li").each(function(index, block) {
     new Hanoi.HanoiUI(game, block, index).installClickListener();
   });
+
+  // $("#sort1, #sort2, #sort3").sortable({
+  //   connectWith: ".connected"
+  // }).disableSelection();
 });
