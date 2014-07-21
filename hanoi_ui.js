@@ -14,7 +14,6 @@
   };
 
   HanoiUI.prototype.handleClick = function(){
-
     var i = this.index;
 
     if ((i <= 2) || (i === 9)) {
@@ -93,6 +92,10 @@ $(function() {
   });
 
   // $("#sort1, #sort2, #sort3").sortable({
-  //   connectWith: ".connected"
+  //   connectWith: ".connected",
+  //   stop: function(event, ui) {
+  //     console.log(event.target)
+  //     console.log(event.toElement)
+  //   }
   // }).disableSelection();
 });
